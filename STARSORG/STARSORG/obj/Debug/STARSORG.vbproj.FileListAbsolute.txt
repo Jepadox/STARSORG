@@ -1,0 +1,12 @@
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\bin\Debug\STARSORG.exe.config
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\bin\Debug\STARSORG.exe
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\bin\Debug\STARSORG.pdb
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\bin\Debug\STARSORG.xml
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.vbprojAssemblyReference.cache
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.frmMain.resources
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.Resources.resources
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.vbproj.GenerateResource.cache
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.vbproj.CoreCompileInputs.cache
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.exe
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.xml
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.pdb
