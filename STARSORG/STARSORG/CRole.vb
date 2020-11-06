@@ -48,7 +48,7 @@ Public Class CRole
         'return -1 if the ID already exosts (can not create a new record with duplicate ID)
         If IsNewRole Then
             Dim params As New ArrayList
-            params.Add(New SqlParameter("roleId", _mstrRoleID))
+            params.Add(New SqlParameter("roleID", _mstrRoleID))
             Dim strResult As String = myDB.GetSingleValueFromSP("sp_CheckRoleIDExists", params)
             If Not strResult = 0 Then
                 Return -1 'not unique
