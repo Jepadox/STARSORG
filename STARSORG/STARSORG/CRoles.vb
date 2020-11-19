@@ -45,6 +45,7 @@ Public Class CRoles
         Else 'no record was returned
             'nothing to do here
         End If
+        objDR.Close()
         Return _Role
 
     End Function
