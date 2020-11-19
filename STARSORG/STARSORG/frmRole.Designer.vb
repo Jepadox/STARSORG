@@ -50,12 +50,12 @@ Partial Class frmRole
         Me.grpRoles = New System.Windows.Forms.GroupBox()
         Me.lstRoles = New System.Windows.Forms.ListBox()
         Me.grpEdit = New System.Windows.Forms.GroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtRoleID = New System.Windows.Forms.TextBox()
-        Me.txtDesc = New System.Windows.Forms.TextBox()
-        Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.txtDesc = New System.Windows.Forms.TextBox()
+        Me.txtRoleID = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         Me.grpNew.SuspendLayout()
         Me.grpRoles.SuspendLayout()
@@ -318,40 +318,14 @@ Partial Class frmRole
         Me.grpEdit.TabStop = False
         Me.grpEdit.Text = "Edit Role"
         '
-        'Label2
+        'btnCancel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(28, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 13)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Role ID"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(28, 104)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(60, 13)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Description"
-        '
-        'txtRoleID
-        '
-        Me.txtRoleID.Location = New System.Drawing.Point(108, 45)
-        Me.txtRoleID.MaxLength = 15
-        Me.txtRoleID.Name = "txtRoleID"
-        Me.txtRoleID.Size = New System.Drawing.Size(183, 20)
-        Me.txtRoleID.TabIndex = 2
-        '
-        'txtDesc
-        '
-        Me.txtDesc.Location = New System.Drawing.Point(108, 85)
-        Me.txtDesc.MaxLength = 100
-        Me.txtDesc.Multiline = True
-        Me.txtDesc.Name = "txtDesc"
-        Me.txtDesc.Size = New System.Drawing.Size(182, 70)
-        Me.txtDesc.TabIndex = 3
+        Me.btnCancel.Location = New System.Drawing.Point(216, 174)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancel.TabIndex = 5
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'btnSave
         '
@@ -362,14 +336,40 @@ Partial Class frmRole
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
-        'btnCancel
+        'txtDesc
         '
-        Me.btnCancel.Location = New System.Drawing.Point(216, 174)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancel.TabIndex = 5
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.txtDesc.Location = New System.Drawing.Point(108, 85)
+        Me.txtDesc.MaxLength = 100
+        Me.txtDesc.Multiline = True
+        Me.txtDesc.Name = "txtDesc"
+        Me.txtDesc.Size = New System.Drawing.Size(182, 70)
+        Me.txtDesc.TabIndex = 3
+        '
+        'txtRoleID
+        '
+        Me.txtRoleID.Location = New System.Drawing.Point(108, 45)
+        Me.txtRoleID.MaxLength = 15
+        Me.txtRoleID.Name = "txtRoleID"
+        Me.txtRoleID.Size = New System.Drawing.Size(183, 20)
+        Me.txtRoleID.TabIndex = 2
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(28, 104)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(60, 13)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Description"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(28, 48)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(43, 13)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Role ID"
         '
         'frmRole
         '
@@ -384,6 +384,7 @@ Partial Class frmRole
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "frmRole"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Member Roles"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()

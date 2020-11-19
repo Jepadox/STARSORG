@@ -1,4 +1,6 @@
 ﻿Public Class frmMain
+    'form objects
+    Private RoleInfo As frmRole
     Private Sub tsbProxy_MouseEnter(sender As Object, e As EventArgs) Handles tsbCourse.MouseEnter, tsbEvent.MouseEnter, tsbHelp.MouseEnter, tsbHome.MouseEnter, tsbMember.MouseEnter, tsbRole.MouseEnter, tsbRSVP.MouseEnter, tsbSemester.MouseEnter, tsbTutor.MouseEnter, tsbLogOut.MouseEnter
         'We need to do this because we are not putting out images in the image property of the toolbar buttons
         Dim tsbProxy As ToolStripButton
@@ -14,7 +16,9 @@
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
-
+        'initialize everything here
+        'instantiate a form object for each form in the application (except main)
+        RoleInfo = New frmRole
         Try
             myDB.OpenDB()
         Catch ex As Exception
@@ -39,5 +43,46 @@
             objSQLConn.Dispose()
         End If
         Me.Cursor = Cursors.Default
+        Application.Exit()
+    End Sub
+
+    Private Sub tsbRole_Click(sender As Object, e As EventArgs) Handles tsbRole.Click
+        Me.Hide()
+        RoleInfo.ShowDialog()
+        Me.Show()
+        PerformNextAction()
+    End Sub
+    Private Sub PerformNextAction()
+        'get the next action selected on the child form and simulate click of button
+        Select Case intNextAction
+            Case ACTION_COURSE
+                tsbCourse.PerformClick()
+            Case ACTION_EVENT
+                tsbEvent.PerformClick()
+            Case ACTION_HELP
+                tsbHelp.PerformClick()
+            Case ACTION_HOME
+                tsbHome.PerformClick()
+            Case ACTION_LOGOUT
+                tsbLogOut.PerformClick()
+            Case ACTION_MEMBER
+                tsbMember.PerformClick()
+            Case ACTION_NONE
+                'do nothing
+            Case ACTION_ROLE
+                tsbRole.PerformClick()
+            Case ACTION_RSVP
+                tsbRSVP.PerformClick()
+            Case ACTION_SEMESTER
+                tsbSemester.PerformClick()
+            Case ACTION_TUTOR
+                tsbTutor.PerformClick()
+            Case Else
+                'do nothing'
+        End Select
+    End Sub
+
+    Private Sub tsbLogOut_Click(sender As Object, e As EventArgs) Handles tsbLogOut.Click
+        EndProgram()
     End Sub
 End Class

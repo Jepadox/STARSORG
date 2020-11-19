@@ -10,3 +10,4 @@ C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STAR
 C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.exe
 C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.xml
 C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.pdb
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.frmRole.resources
