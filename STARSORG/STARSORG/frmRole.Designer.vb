@@ -22,6 +22,7 @@ Partial Class frmRole
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.tsbHome = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -56,10 +57,15 @@ Partial Class frmRole
         Me.txtRoleID = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.tslStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.errP = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ToolStrip1.SuspendLayout()
         Me.grpNew.SuspendLayout()
         Me.grpRoles.SuspendLayout()
         Me.grpEdit.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
+        CType(Me.errP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -371,6 +377,26 @@ Partial Class frmRole
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Role ID"
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tslStatus})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 376)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(688, 22)
+        Me.StatusStrip1.TabIndex = 7
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'tslStatus
+        '
+        Me.tslStatus.AutoSize = False
+        Me.tslStatus.Name = "tslStatus"
+        Me.tslStatus.Size = New System.Drawing.Size(620, 17)
+        Me.tslStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'errP
+        '
+        Me.errP.ContainerControl = Me
+        '
         'frmRole
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -378,6 +404,7 @@ Partial Class frmRole
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(688, 398)
         Me.ControlBox = False
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.grpEdit)
         Me.Controls.Add(Me.grpRoles)
         Me.Controls.Add(Me.grpNew)
@@ -393,7 +420,11 @@ Partial Class frmRole
         Me.grpRoles.ResumeLayout(False)
         Me.grpEdit.ResumeLayout(False)
         Me.grpEdit.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
+        CType(Me.errP, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -431,4 +462,7 @@ Partial Class frmRole
     Friend WithEvents txtRoleID As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents tslStatus As ToolStripStatusLabel
+    Friend WithEvents errP As ErrorProvider
 End Class

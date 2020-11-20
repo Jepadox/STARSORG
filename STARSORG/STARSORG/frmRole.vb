@@ -119,4 +119,56 @@ Public Class frmRole
             MessageBox.Show("Error loading Role values: " & ex.ToString, "Program error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
+    Private Sub chkNew_CheckedChanged(sender As Object, e As EventArgs) Handles chkNew.CheckedChanged
+        If blnClearing Then
+            Exit Sub
+        End If
+        If chkNew.Checked Then
+            tslStatus.Text = ""
+            txtRoleID.Clear()
+            txtDesc.Clear()
+            lstRoles.SelectedIndex = -1
+            grpRoles.Enabled = False
+            grpEdit.Enabled = True
+            txtRoleID.Focus()
+            objRoles.CreateNewRole()
+        Else
+            grpRoles.Enabled = True
+            grpEdit.Enabled = False
+            objRoles.CurrentObject.IsNewRole = False
+        End If
+    End Sub
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        Dim intResult As Integer
+        Dim blnErrors As Boolean
+        tslStatus.Text = ""
+        '------ add your validation code here -----
+        If Not ValidateTextBoxLength(txtRoleID, errP) Then
+            blnErrors = True
+        End If
+        If Not ValidateTextBoxLength(txtDesc, errP) Then
+            blnErrors = True
+        End If
+        If blnErrors Then
+            Exit Sub
+        End If
+        With objRoles.CurrentObject
+            .RoleID = txtRoleID.Text
+            .RoleDescription = txtDesc.Text
+        End With
+        Try
+            Me.Cursor = Cursors.WaitCursor
+            intResult = objRoles.Save
+            If intResult = 1 Then
+                tslStatus.Text = "Role record saved"
+            End If
+            If intResult = -1 Then 'role ID was not unique when adding new record
+                MessageBox.Show("RoleID must be unique. Unable to save role record", "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class
