@@ -3,6 +3,7 @@ Public Class frmRole
     Private objRoles As CRoles
     Private blnClearing As Boolean
     Private blnReloading As Boolean
+    Private RoleReport As frmReport
 #Region "Toolbar Stuff"
     Private Sub tsbProxy_MouseEnter(sender As Object, e As EventArgs) Handles tsbCourse.MouseEnter, tsbEvent.MouseEnter, tsbHelp.MouseEnter, tsbHome.MouseEnter, tsbMember.MouseEnter, tsbRole.MouseEnter, tsbRSVP.MouseEnter, tsbSemester.MouseEnter, tsbTutor.MouseEnter, tsbLogOut.MouseEnter
         'We need to do this because we are not putting out images in the image property of the toolbar buttons
@@ -208,5 +209,13 @@ Public Class frmRole
         grpRoles.Enabled = True
     End Sub
 
-
+    Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
+        RoleReport = New frmReport
+        If lstRoles.Items.Count = 0 Then 'nothing to print
+            MessageBox.Show("No records to print")
+            Exit Sub
+        End If
+        Me.Cursor = Cursors.WaitCursor
+        RoleReport.Display()
+    End Sub
 End Class

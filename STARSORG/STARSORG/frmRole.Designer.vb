@@ -60,6 +60,7 @@ Partial Class frmRole
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.tslStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.errP = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.btnReport = New System.Windows.Forms.Button()
         Me.ToolStrip1.SuspendLayout()
         Me.grpNew.SuspendLayout()
         Me.grpRoles.SuspendLayout()
@@ -311,6 +312,7 @@ Partial Class frmRole
         '
         'grpEdit
         '
+        Me.grpEdit.Controls.Add(Me.btnReport)
         Me.grpEdit.Controls.Add(Me.btnCancel)
         Me.grpEdit.Controls.Add(Me.btnSave)
         Me.grpEdit.Controls.Add(Me.txtDesc)
@@ -326,7 +328,7 @@ Partial Class frmRole
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(216, 174)
+        Me.btnCancel.Location = New System.Drawing.Point(123, 174)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 5
@@ -335,7 +337,7 @@ Partial Class frmRole
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(108, 174)
+        Me.btnSave.Location = New System.Drawing.Point(31, 174)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 4
@@ -396,6 +398,15 @@ Partial Class frmRole
         'errP
         '
         Me.errP.ContainerControl = Me
+        '
+        'btnReport
+        '
+        Me.btnReport.Location = New System.Drawing.Point(215, 174)
+        Me.btnReport.Name = "btnReport"
+        Me.btnReport.Size = New System.Drawing.Size(75, 23)
+        Me.btnReport.TabIndex = 6
+        Me.btnReport.Text = "Report"
+        Me.btnReport.UseVisualStyleBackColor = True
         '
         'frmRole
         '
@@ -465,4 +476,5 @@ Partial Class frmRole
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents tslStatus As ToolStripStatusLabel
     Friend WithEvents errP As ErrorProvider
+    Friend WithEvents btnReport As Button
 End Class
