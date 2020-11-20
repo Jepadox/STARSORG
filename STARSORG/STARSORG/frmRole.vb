@@ -67,6 +67,19 @@ Public Class frmRole
         Me.Hide()
     End Sub
 #End Region
+
+#Region "Textboxes"
+    Private Sub txtBoxes_GotFocus(sender As Object, e As EventArgs) Handles txtDesc.GotFocus, txtRoleID.GotFocus
+        Dim txtBox As TextBox
+        txtBox = DirectCast(sender, TextBox)
+        txtBox.SelectAll()
+    End Sub
+    Private Sub txtBoxes_LostFocus(sender As Object, e As EventArgs) Handles txtRoleID.LostFocus, txtDesc.LostFocus
+        Dim txtBox As TextBox
+        txtBox = DirectCast(sender, TextBox)
+        txtBox.DeselectAll()
+    End Sub
+#End Region
     Private Sub LoadRoles()
         Dim objReader As SqlDataReader
         lstRoles.Items.Clear()
@@ -99,6 +112,7 @@ Public Class frmRole
             Exit Sub
         End If
         If blnReloading Then
+            tslStatus.Text = ""
             Exit Sub
         End If
         If lstRoles.SelectedIndex = -1 Then
@@ -178,4 +192,21 @@ Public Class frmRole
         chkNew.Checked = False
         grpRoles.Enabled = True 'in case it was disabled for a new record
     End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        blnClearing = True
+        tslStatus.Text = ""
+        chkNew.Checked = False
+        errP.Clear()
+        If lstRoles.SelectedIndex <> -1 Then
+            LoadSelectedRecord() 'reload what was selected if user messed up form
+        Else
+            grpEdit.Enabled = False
+        End If
+        blnClearing = False
+        objRoles.CurrentObject.IsNewRole = False
+        grpRoles.Enabled = True
+    End Sub
+
+
 End Class
