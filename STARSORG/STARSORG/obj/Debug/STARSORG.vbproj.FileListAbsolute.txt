@@ -74,3 +74,5 @@ C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STAR
 C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\RdlCompile.cache
 C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\RdlCompile.compiled
 C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.vbproj.CopyComplete
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.frmLogin.resources
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.frmAdmin.resources

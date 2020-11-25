@@ -107,6 +107,7 @@ Partial Class frmLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(293, 225)
+        Me.ControlBox = False
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.btnGuest)
         Me.Controls.Add(Me.btnLogin)
@@ -116,6 +117,7 @@ Partial Class frmLogin
         Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmLogin"
         Me.ResumeLayout(False)
         Me.PerformLayout()
