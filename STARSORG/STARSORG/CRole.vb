@@ -45,7 +45,7 @@ Public Class CRole
     End Property
 #End Region
     Public Function Save() As Integer
-        'return -1 if the ID already exosts (can not create a new record with duplicate ID)
+        'return -1 if the ID already exists (can not create a new record with duplicate ID)
         If IsNewRole Then
             Dim params As New ArrayList
             params.Add(New SqlParameter("roleID", _mstrRoleID))

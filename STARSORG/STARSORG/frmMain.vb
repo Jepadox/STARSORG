@@ -1,6 +1,7 @@
 ﻿Public Class frmMain
     'form objects
     Private RoleInfo As frmRole
+    Private Login As frmLogin
     Private Sub tsbProxy_MouseEnter(sender As Object, e As EventArgs) Handles tsbCourse.MouseEnter, tsbEvent.MouseEnter, tsbHelp.MouseEnter, tsbHome.MouseEnter, tsbMember.MouseEnter, tsbRole.MouseEnter, tsbRSVP.MouseEnter, tsbSemester.MouseEnter, tsbTutor.MouseEnter, tsbLogOut.MouseEnter
         'We need to do this because we are not putting out images in the image property of the toolbar buttons
         Dim tsbProxy As ToolStripButton
@@ -18,6 +19,7 @@
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         'initialize everything here
         'instantiate a form object for each form in the application (except main)
+        Login = New frmLogin
         RoleInfo = New frmRole
         Try
             myDB.OpenDB()
@@ -25,6 +27,7 @@
             MessageBox.Show("Unable to open database. Connection string =" & gstrConn, "DB Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             EndProgram()
         End Try
+        'Login.ShowDialog()
     End Sub
     Private Sub EndProgram()
         'Close all forms except main
@@ -84,5 +87,9 @@
 
     Private Sub tsbLogOut_Click(sender As Object, e As EventArgs) Handles tsbLogOut.Click
         EndProgram()
+    End Sub
+
+    Private Sub frmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Login.ShowDialog()
     End Sub
 End Class

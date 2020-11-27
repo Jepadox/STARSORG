@@ -94,6 +94,7 @@
     <Compile Include="CDB.vb" />
     <Compile Include="CRole.vb" />
     <Compile Include="CRoles.vb" />
+    <Compile Include="CSecurity.vb" />
     <Compile Include="frmAdmin.Designer.vb">
       <DependentUpon>frmAdmin.vb</DependentUpon>
     </Compile>
