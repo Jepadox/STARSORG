@@ -2,6 +2,7 @@
     'form objects
     Private RoleInfo As frmRole
     Private Login As frmLogin
+    Private MemberInfo As frmMember
     Private Sub tsbProxy_MouseEnter(sender As Object, e As EventArgs) Handles tsbCourse.MouseEnter, tsbEvent.MouseEnter, tsbHelp.MouseEnter, tsbHome.MouseEnter, tsbMember.MouseEnter, tsbRole.MouseEnter, tsbRSVP.MouseEnter, tsbSemester.MouseEnter, tsbTutor.MouseEnter, tsbLogOut.MouseEnter
         'We need to do this because we are not putting out images in the image property of the toolbar buttons
         Dim tsbProxy As ToolStripButton
@@ -20,6 +21,7 @@
         'initialize everything here
         'instantiate a form object for each form in the application (except main)
         Login = New frmLogin
+        MemberInfo = New frmMember
         RoleInfo = New frmRole
         Try
             myDB.OpenDB()
@@ -52,6 +54,12 @@
     Private Sub tsbRole_Click(sender As Object, e As EventArgs) Handles tsbRole.Click
         Me.Hide()
         RoleInfo.ShowDialog()
+        Me.Show()
+        PerformNextAction()
+    End Sub
+    Private Sub tsbMember_Click(sender As Object, e As EventArgs) Handles tsbMember.Click
+        Me.Hide()
+        MemberInfo.ShowDialog()
         Me.Show()
         PerformNextAction()
     End Sub
@@ -90,6 +98,6 @@
     End Sub
 
     Private Sub frmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        Login.ShowDialog()
+        'Login.ShowDialog()
     End Sub
 End Class
