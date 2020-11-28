@@ -29,7 +29,7 @@ Public Class CSecuritys
         objDR = myDB.GetDataReaderBySP("sp_getAllUserIDs", Nothing)
         Return objDR
     End Function
-    Public Function GetPasswordByUserID(strID As String) As CSecurity
+    Public Function GetUserByUserID(strID As String) As CSecurity
         Dim params As New ArrayList
         'Dim objDR As SqlDataReader
         params.Add(New SqlParameter("userID", strID))

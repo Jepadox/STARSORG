@@ -3,6 +3,7 @@
     Private RoleInfo As frmRole
     Private Login As frmLogin
     Private MemberInfo As frmMember
+    Private Admin As frmAdmin
     Private Sub tsbProxy_MouseEnter(sender As Object, e As EventArgs) Handles tsbCourse.MouseEnter, tsbEvent.MouseEnter, tsbHelp.MouseEnter, tsbHome.MouseEnter, tsbMember.MouseEnter, tsbRole.MouseEnter, tsbRSVP.MouseEnter, tsbSemester.MouseEnter, tsbTutor.MouseEnter, tsbLogOut.MouseEnter
         'We need to do this because we are not putting out images in the image property of the toolbar buttons
         Dim tsbProxy As ToolStripButton
@@ -23,6 +24,7 @@
         Login = New frmLogin
         MemberInfo = New frmMember
         RoleInfo = New frmRole
+        Admin = New frmAdmin
         Try
             myDB.OpenDB()
         Catch ex As Exception
@@ -98,6 +100,13 @@
     End Sub
 
     Private Sub frmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        'Login.ShowDialog()
+        Login.ShowDialog()
+    End Sub
+
+    Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btnAdmin.Click
+        Me.Hide()
+        Admin.ShowDialog()
+        Me.Show()
+        PerformNextAction()
     End Sub
 End Class

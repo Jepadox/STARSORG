@@ -27,12 +27,14 @@ Partial Class frmLogin
         Me.txtUser = New System.Windows.Forms.TextBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblPassword = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnGuest = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.btnChngPass = New System.Windows.Forms.Button()
         Me.errP = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.lblNewPassword = New System.Windows.Forms.Label()
+        Me.txtNewPassword = New System.Windows.Forms.TextBox()
+        Me.chkChangePassword = New System.Windows.Forms.CheckBox()
         CType(Me.errP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -48,7 +50,7 @@ Partial Class frmLogin
         '
         'txtUser
         '
-        Me.txtUser.Location = New System.Drawing.Point(51, 78)
+        Me.txtUser.Location = New System.Drawing.Point(51, 68)
         Me.txtUser.MaxLength = 15
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(350, 20)
@@ -56,7 +58,7 @@ Partial Class frmLogin
         '
         'txtPass
         '
-        Me.txtPass.Location = New System.Drawing.Point(51, 117)
+        Me.txtPass.Location = New System.Drawing.Point(51, 107)
         Me.txtPass.MaxLength = 8
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -66,72 +68,95 @@ Partial Class frmLogin
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(48, 62)
+        Me.Label2.Location = New System.Drawing.Point(48, 52)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Username"
         '
-        'Label3
+        'lblPassword
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(48, 101)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 13)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Password"
+        Me.lblPassword.AutoSize = True
+        Me.lblPassword.Location = New System.Drawing.Point(48, 91)
+        Me.lblPassword.Name = "lblPassword"
+        Me.lblPassword.Size = New System.Drawing.Size(53, 13)
+        Me.lblPassword.TabIndex = 4
+        Me.lblPassword.Text = "Password"
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(51, 162)
+        Me.btnLogin.Location = New System.Drawing.Point(51, 195)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(83, 35)
+        Me.btnLogin.Size = New System.Drawing.Size(99, 35)
         Me.btnLogin.TabIndex = 5
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
         'btnGuest
         '
-        Me.btnGuest.Location = New System.Drawing.Point(140, 162)
+        Me.btnGuest.Location = New System.Drawing.Point(176, 195)
         Me.btnGuest.Name = "btnGuest"
-        Me.btnGuest.Size = New System.Drawing.Size(83, 35)
+        Me.btnGuest.Size = New System.Drawing.Size(99, 35)
         Me.btnGuest.TabIndex = 6
         Me.btnGuest.Text = "Login as guest"
         Me.btnGuest.UseVisualStyleBackColor = True
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(318, 162)
+        Me.btnExit.Location = New System.Drawing.Point(301, 195)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(83, 35)
+        Me.btnExit.Size = New System.Drawing.Size(99, 35)
         Me.btnExit.TabIndex = 8
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
-        '
-        'btnChngPass
-        '
-        Me.btnChngPass.Location = New System.Drawing.Point(229, 162)
-        Me.btnChngPass.Name = "btnChngPass"
-        Me.btnChngPass.Size = New System.Drawing.Size(83, 35)
-        Me.btnChngPass.TabIndex = 9
-        Me.btnChngPass.Text = "Change Password"
-        Me.btnChngPass.UseVisualStyleBackColor = True
         '
         'errP
         '
         Me.errP.ContainerControl = Me
         '
+        'lblNewPassword
+        '
+        Me.lblNewPassword.AutoSize = True
+        Me.lblNewPassword.Location = New System.Drawing.Point(48, 153)
+        Me.lblNewPassword.Name = "lblNewPassword"
+        Me.lblNewPassword.Size = New System.Drawing.Size(78, 13)
+        Me.lblNewPassword.TabIndex = 10
+        Me.lblNewPassword.Text = "New Password"
+        Me.lblNewPassword.Visible = False
+        '
+        'txtNewPassword
+        '
+        Me.txtNewPassword.Location = New System.Drawing.Point(51, 169)
+        Me.txtNewPassword.MaxLength = 8
+        Me.txtNewPassword.Name = "txtNewPassword"
+        Me.txtNewPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtNewPassword.Size = New System.Drawing.Size(350, 20)
+        Me.txtNewPassword.TabIndex = 9
+        Me.txtNewPassword.Visible = False
+        '
+        'chkChangePassword
+        '
+        Me.chkChangePassword.AutoSize = True
+        Me.chkChangePassword.Location = New System.Drawing.Point(51, 133)
+        Me.chkChangePassword.Name = "chkChangePassword"
+        Me.chkChangePassword.Size = New System.Drawing.Size(121, 17)
+        Me.chkChangePassword.TabIndex = 11
+        Me.chkChangePassword.Text = "Change Password? "
+        Me.chkChangePassword.UseVisualStyleBackColor = True
+        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(448, 230)
+        Me.ClientSize = New System.Drawing.Size(448, 240)
         Me.ControlBox = False
-        Me.Controls.Add(Me.btnChngPass)
+        Me.Controls.Add(Me.chkChangePassword)
+        Me.Controls.Add(Me.lblNewPassword)
+        Me.Controls.Add(Me.txtNewPassword)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnGuest)
         Me.Controls.Add(Me.btnLogin)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.txtUser)
@@ -149,10 +174,12 @@ Partial Class frmLogin
     Friend WithEvents txtUser As TextBox
     Friend WithEvents txtPass As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblPassword As Label
     Friend WithEvents btnLogin As Button
     Friend WithEvents btnGuest As Button
     Friend WithEvents btnExit As Button
-    Friend WithEvents btnChngPass As Button
     Friend WithEvents errP As ErrorProvider
+    Friend WithEvents lblNewPassword As Label
+    Friend WithEvents txtNewPassword As TextBox
+    Friend WithEvents chkChangePassword As CheckBox
 End Class
