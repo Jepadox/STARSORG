@@ -11,8 +11,9 @@
     Public Const ACTION_COURSE As Integer = 6
     Public Const ACTION_SEMESTER As Integer = 7
     Public Const ACTION_TUTOR As Integer = 8
-    Public Const ACTION_HELP As Integer = 9
-    Public Const ACTION_LOGOUT As Integer = 10
+    Public Const ACTION_ADMIN As Integer = 9
+    Public Const ACTION_HELP As Integer = 10
+    Public Const ACTION_LOGOUT As Integer = 11
 #End Region
 #Region "Security Privliges"
     Public Const ADMIN As String = "ADMIN"

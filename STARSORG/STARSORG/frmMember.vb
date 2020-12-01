@@ -5,7 +5,7 @@ Public Class frmMember
     Private blnClearing As Boolean
     Private blnReloading As Boolean
 #Region "ToolBar Stuff"
-    Private Sub tsbProxy_MouseEnter(sender As Object, e As EventArgs) Handles tsbCourse.MouseEnter, tsbEvent.MouseEnter, tsbHelp.MouseEnter, tsbHome.MouseEnter, tsbLogOut.MouseEnter, tsbMember.MouseEnter, tsbRole.MouseEnter, tsbRSVP.MouseEnter, tsbSemester.MouseEnter, tsbTutor.MouseEnter
+    Private Sub tsbProxy_MouseEnter(sender As Object, e As EventArgs) Handles tsbCourse.MouseEnter, tsbEvent.MouseEnter, tsbHelp.MouseEnter, tsbHome.MouseEnter, tsbLogOut.MouseEnter, tsbMember.MouseEnter, tsbRole.MouseEnter, tsbRSVP.MouseEnter, tsbSemester.MouseEnter, tsbTutor.MouseEnter, tsbAdmin.MouseEnter
         'We need to do this only because we are not putting our images in the image property of the toolbar buttons
         Dim tsbProxy As ToolStripButton
         tsbProxy = DirectCast(sender, ToolStripButton)
@@ -13,7 +13,7 @@ Public Class frmMember
 
     End Sub
 
-    Private Sub tsbProxy_MouseLeave(sender As Object, e As EventArgs) Handles tsbCourse.MouseLeave, tsbEvent.MouseLeave, tsbHelp.MouseLeave, tsbHome.MouseLeave, tsbLogOut.MouseLeave, tsbMember.MouseLeave, tsbRole.MouseLeave, tsbRSVP.MouseLeave, tsbSemester.MouseLeave, tsbTutor.MouseLeave
+    Private Sub tsbProxy_MouseLeave(sender As Object, e As EventArgs) Handles tsbCourse.MouseLeave, tsbEvent.MouseLeave, tsbHelp.MouseLeave, tsbHome.MouseLeave, tsbLogOut.MouseLeave, tsbMember.MouseLeave, tsbRole.MouseLeave, tsbRSVP.MouseLeave, tsbSemester.MouseLeave, tsbTutor.MouseLeave, tsbAdmin.MouseLeave
         'We need to do this only because we are not putting our images in the image property of the toolbar buttons
         Dim tsbProxy As ToolStripButton
         tsbProxy = DirectCast(sender, ToolStripButton)
@@ -69,6 +69,10 @@ Public Class frmMember
         intNextAction = ACTION_TUTOR
         Me.Hide()
     End Sub
+    Private Sub tsbAdmin_Click(sender As Object, e As EventArgs) Handles tsbAdmin.Click
+        intNextAction = ACTION_ADMIN
+        Me.Hide()
+    End Sub
 #End Region
 #Region "TextBoxes"
     Private Sub txtBoxes_GotFocus(sender As Object, e As EventArgs) Handles txtPID.GotFocus, txtFName.GotFocus, txtLName.GotFocus, txtMiddleName.GotFocus, txtEmail.GotFocus
@@ -109,6 +113,10 @@ Public Class frmMember
     End Sub
 
     Private Sub frmMember_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        If secRole = "ADMIN" Then
+            tsbAdmin.Visible = True
+            tsbAdminSeparator.Visible = True
+        End If
         ClearScreenControls(Me)
         LoadMembers()
         grpEdit.Enabled = False

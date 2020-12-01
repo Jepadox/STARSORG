@@ -4,14 +4,14 @@
     Private Login As frmLogin
     Private MemberInfo As frmMember
     Private Admin As frmAdmin
-    Private Sub tsbProxy_MouseEnter(sender As Object, e As EventArgs) Handles tsbCourse.MouseEnter, tsbEvent.MouseEnter, tsbHelp.MouseEnter, tsbHome.MouseEnter, tsbMember.MouseEnter, tsbRole.MouseEnter, tsbRSVP.MouseEnter, tsbSemester.MouseEnter, tsbTutor.MouseEnter, tsbLogOut.MouseEnter
+    Private Sub tsbProxy_MouseEnter(sender As Object, e As EventArgs) Handles tsbCourse.MouseEnter, tsbEvent.MouseEnter, tsbHelp.MouseEnter, tsbHome.MouseEnter, tsbMember.MouseEnter, tsbRole.MouseEnter, tsbRSVP.MouseEnter, tsbSemester.MouseEnter, tsbTutor.MouseEnter, tsbLogOut.MouseEnter, tsbAdmin.MouseEnter
         'We need to do this because we are not putting out images in the image property of the toolbar buttons
         Dim tsbProxy As ToolStripButton
         tsbProxy = DirectCast(sender, ToolStripButton)
         tsbProxy.DisplayStyle = ToolStripItemDisplayStyle.Text
     End Sub
 
-    Private Sub tsbProxy_MouseLeave(sender As Object, e As EventArgs) Handles tsbCourse.MouseLeave, tsbEvent.MouseLeave, tsbHelp.MouseLeave, tsbHome.MouseLeave, tsbMember.MouseLeave, tsbRole.MouseLeave, tsbRSVP.MouseLeave, tsbSemester.MouseLeave, tsbTutor.MouseLeave, tsbLogOut.MouseLeave
+    Private Sub tsbProxy_MouseLeave(sender As Object, e As EventArgs) Handles tsbCourse.MouseLeave, tsbEvent.MouseLeave, tsbHelp.MouseLeave, tsbHome.MouseLeave, tsbMember.MouseLeave, tsbRole.MouseLeave, tsbRSVP.MouseLeave, tsbSemester.MouseLeave, tsbTutor.MouseLeave, tsbLogOut.MouseLeave, tsbAdmin.MouseLeave
         'We need to do this because we are not putting out images in the image property of the toolbar buttons
         Dim tsbProxy As ToolStripButton
         tsbProxy = DirectCast(sender, ToolStripButton)
@@ -59,6 +59,12 @@
         Me.Show()
         PerformNextAction()
     End Sub
+    Private Sub tsbAdmin_Click(sender As Object, e As EventArgs) Handles tsbAdmin.Click
+        Me.Hide()
+        Admin.ShowDialog()
+        Me.Show()
+        PerformNextAction()
+    End Sub
     Private Sub tsbMember_Click(sender As Object, e As EventArgs) Handles tsbMember.Click
         Me.Hide()
         MemberInfo.ShowDialog()
@@ -90,6 +96,8 @@
                 tsbSemester.PerformClick()
             Case ACTION_TUTOR
                 tsbTutor.PerformClick()
+            Case ACTION_ADMIN
+                tsbAdmin.PerformClick()
             Case Else
                 'do nothing'
         End Select
@@ -101,6 +109,10 @@
 
     Private Sub frmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Login.ShowDialog()
+        If secRole = "ADMIN" Then
+            tsbAdmin.Visible = True
+            tsbAdminSeparator.Visible = True
+        End If
     End Sub
 
     Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btnAdmin.Click

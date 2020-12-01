@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmAdmin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class frmAdmin
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
@@ -35,16 +36,22 @@ Partial Class frmAdmin
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.grpEdit = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.cboSecurity = New System.Windows.Forms.ComboBox()
+        Me.txtPID = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.txtUserID = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.grpRoles = New System.Windows.Forms.GroupBox()
+        Me.grpMembers = New System.Windows.Forms.GroupBox()
         Me.lstMembers = New System.Windows.Forms.ListBox()
-        Me.grpNew = New System.Windows.Forms.GroupBox()
-        Me.chkNew = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.tslStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.errP = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.tsbHome = New System.Windows.Forms.ToolStripButton()
         Me.tsbMember = New System.Windows.Forms.ToolStripButton()
         Me.tsbRole = New System.Windows.Forms.ToolStripButton()
@@ -55,17 +62,19 @@ Partial Class frmAdmin
         Me.tsbTutor = New System.Windows.Forms.ToolStripButton()
         Me.tsbLogOut = New System.Windows.Forms.ToolStripButton()
         Me.tsbHelp = New System.Windows.Forms.ToolStripButton()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.tsbAdmin = New System.Windows.Forms.ToolStripButton()
+        Me.tsbAdminSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStrip1.SuspendLayout()
         Me.grpEdit.SuspendLayout()
-        Me.grpRoles.SuspendLayout()
-        Me.grpNew.SuspendLayout()
+        Me.grpMembers.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
+        CType(Me.errP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
         '
         Me.ToolStrip1.AutoSize = False
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbHome, Me.ToolStripSeparator1, Me.tsbMember, Me.ToolStripSeparator11, Me.tsbRole, Me.ToolStripSeparator8, Me.tsbEvent, Me.ToolStripSeparator7, Me.tsbRSVP, Me.ToolStripSeparator3, Me.tsbCourse, Me.ToolStripSeparator2, Me.tsbSemester, Me.ToolStripSeparator6, Me.tsbTutor, Me.ToolStripSeparator9, Me.tsbLogOut, Me.ToolStripSeparator5, Me.tsbHelp, Me.ToolStripSeparator10, Me.ToolStripSeparator4})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbHome, Me.ToolStripSeparator1, Me.tsbMember, Me.ToolStripSeparator11, Me.tsbRole, Me.ToolStripSeparator8, Me.tsbEvent, Me.ToolStripSeparator7, Me.tsbRSVP, Me.ToolStripSeparator3, Me.tsbCourse, Me.ToolStripSeparator2, Me.tsbSemester, Me.ToolStripSeparator6, Me.tsbTutor, Me.ToolStripSeparator9, Me.tsbLogOut, Me.ToolStripSeparator5, Me.tsbHelp, Me.ToolStripSeparator10, Me.ToolStripSeparator4, Me.tsbAdmin, Me.tsbAdminSeparator})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(698, 50)
@@ -143,6 +152,10 @@ Partial Class frmAdmin
         '
         'grpEdit
         '
+        Me.grpEdit.Controls.Add(Me.Label5)
+        Me.grpEdit.Controls.Add(Me.cboSecurity)
+        Me.grpEdit.Controls.Add(Me.txtPID)
+        Me.grpEdit.Controls.Add(Me.Label4)
         Me.grpEdit.Controls.Add(Me.txtPassword)
         Me.grpEdit.Controls.Add(Me.btnCancel)
         Me.grpEdit.Controls.Add(Me.btnSave)
@@ -154,7 +167,51 @@ Partial Class frmAdmin
         Me.grpEdit.Size = New System.Drawing.Size(336, 218)
         Me.grpEdit.TabIndex = 10
         Me.grpEdit.TabStop = False
-        Me.grpEdit.Text = "Edit Role"
+        Me.grpEdit.Text = "Edit/Add Credentials"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(28, 110)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(70, 13)
+        Me.Label5.TabIndex = 11
+        Me.Label5.Text = "Security Role"
+        '
+        'cboSecurity
+        '
+        Me.cboSecurity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboSecurity.FormattingEnabled = True
+        Me.cboSecurity.Location = New System.Drawing.Point(108, 107)
+        Me.cboSecurity.Name = "cboSecurity"
+        Me.cboSecurity.Size = New System.Drawing.Size(183, 21)
+        Me.cboSecurity.TabIndex = 10
+        '
+        'txtPID
+        '
+        Me.txtPID.Enabled = False
+        Me.txtPID.Location = New System.Drawing.Point(108, 29)
+        Me.txtPID.MaxLength = 15
+        Me.txtPID.Name = "txtPID"
+        Me.txtPID.Size = New System.Drawing.Size(183, 20)
+        Me.txtPID.TabIndex = 9
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(28, 32)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(25, 13)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "PID"
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Location = New System.Drawing.Point(108, 81)
+        Me.txtPassword.MaxLength = 15
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(183, 20)
+        Me.txtPassword.TabIndex = 7
         '
         'btnCancel
         '
@@ -176,7 +233,7 @@ Partial Class frmAdmin
         '
         'txtUserID
         '
-        Me.txtUserID.Location = New System.Drawing.Point(108, 45)
+        Me.txtUserID.Location = New System.Drawing.Point(108, 55)
         Me.txtUserID.MaxLength = 15
         Me.txtUserID.Name = "txtUserID"
         Me.txtUserID.Size = New System.Drawing.Size(183, 20)
@@ -185,7 +242,7 @@ Partial Class frmAdmin
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(28, 104)
+        Me.Label3.Location = New System.Drawing.Point(28, 84)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(53, 13)
         Me.Label3.TabIndex = 1
@@ -194,21 +251,21 @@ Partial Class frmAdmin
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(28, 48)
+        Me.Label2.Location = New System.Drawing.Point(28, 58)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 13)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "User ID "
         '
-        'grpRoles
+        'grpMembers
         '
-        Me.grpRoles.Controls.Add(Me.lstMembers)
-        Me.grpRoles.Location = New System.Drawing.Point(25, 151)
-        Me.grpRoles.Name = "grpRoles"
-        Me.grpRoles.Size = New System.Drawing.Size(275, 218)
-        Me.grpRoles.TabIndex = 9
-        Me.grpRoles.TabStop = False
-        Me.grpRoles.Text = "Members"
+        Me.grpMembers.Controls.Add(Me.lstMembers)
+        Me.grpMembers.Location = New System.Drawing.Point(25, 151)
+        Me.grpMembers.Name = "grpMembers"
+        Me.grpMembers.Size = New System.Drawing.Size(275, 218)
+        Me.grpMembers.TabIndex = 9
+        Me.grpMembers.TabStop = False
+        Me.grpMembers.Text = "Members"
         '
         'lstMembers
         '
@@ -217,26 +274,6 @@ Partial Class frmAdmin
         Me.lstMembers.Name = "lstMembers"
         Me.lstMembers.Size = New System.Drawing.Size(234, 186)
         Me.lstMembers.TabIndex = 0
-        '
-        'grpNew
-        '
-        Me.grpNew.Controls.Add(Me.chkNew)
-        Me.grpNew.Location = New System.Drawing.Point(121, 386)
-        Me.grpNew.Name = "grpNew"
-        Me.grpNew.Size = New System.Drawing.Size(275, 47)
-        Me.grpNew.TabIndex = 8
-        Me.grpNew.TabStop = False
-        Me.grpNew.Text = "New Role"
-        '
-        'chkNew
-        '
-        Me.chkNew.AutoSize = True
-        Me.chkNew.Location = New System.Drawing.Point(16, 19)
-        Me.chkNew.Name = "chkNew"
-        Me.chkNew.Size = New System.Drawing.Size(95, 17)
-        Me.chkNew.TabIndex = 0
-        Me.chkNew.Text = "Add New Role"
-        Me.chkNew.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -249,6 +286,26 @@ Partial Class frmAdmin
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Administrator"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tslStatus})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 390)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(698, 22)
+        Me.StatusStrip1.TabIndex = 11
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'tslStatus
+        '
+        Me.tslStatus.AutoSize = False
+        Me.tslStatus.Name = "tslStatus"
+        Me.tslStatus.Size = New System.Drawing.Size(620, 17)
+        Me.tslStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'errP
+        '
+        Me.errP.ContainerControl = Me
         '
         'tsbHome
         '
@@ -362,13 +419,24 @@ Partial Class frmAdmin
         Me.tsbHelp.Size = New System.Drawing.Size(48, 48)
         Me.tsbHelp.Text = "HELP"
         '
-        'txtPassword
+        'tsbAdmin
         '
-        Me.txtPassword.Location = New System.Drawing.Point(108, 101)
-        Me.txtPassword.MaxLength = 15
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(183, 20)
-        Me.txtPassword.TabIndex = 7
+        Me.tsbAdmin.AutoSize = False
+        Me.tsbAdmin.BackgroundImage = Global.STARSORG.My.Resources.Resources.admin
+        Me.tsbAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.tsbAdmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbAdmin.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbAdmin.Name = "tsbAdmin"
+        Me.tsbAdmin.Size = New System.Drawing.Size(48, 48)
+        Me.tsbAdmin.Text = "ADMIN"
+        Me.tsbAdmin.Visible = False
+        '
+        'tsbAdminSeparator
+        '
+        Me.tsbAdminSeparator.AutoSize = False
+        Me.tsbAdminSeparator.Name = "tsbAdminSeparator"
+        Me.tsbAdminSeparator.Size = New System.Drawing.Size(10, 50)
+        Me.tsbAdminSeparator.Visible = False
         '
         'frmAdmin
         '
@@ -376,9 +444,9 @@ Partial Class frmAdmin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(698, 412)
         Me.ControlBox = False
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.grpEdit)
-        Me.Controls.Add(Me.grpRoles)
-        Me.Controls.Add(Me.grpNew)
+        Me.Controls.Add(Me.grpMembers)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "frmAdmin"
@@ -388,10 +456,12 @@ Partial Class frmAdmin
         Me.ToolStrip1.PerformLayout()
         Me.grpEdit.ResumeLayout(False)
         Me.grpEdit.PerformLayout()
-        Me.grpRoles.ResumeLayout(False)
-        Me.grpNew.ResumeLayout(False)
-        Me.grpNew.PerformLayout()
+        Me.grpMembers.ResumeLayout(False)
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
+        CType(Me.errP, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -423,10 +493,17 @@ Partial Class frmAdmin
     Friend WithEvents txtUserID As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents grpRoles As GroupBox
+    Friend WithEvents grpMembers As GroupBox
     Friend WithEvents lstMembers As ListBox
-    Friend WithEvents grpNew As GroupBox
-    Friend WithEvents chkNew As CheckBox
     Friend WithEvents Label1 As Label
     Friend WithEvents txtPassword As TextBox
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents tslStatus As ToolStripStatusLabel
+    Friend WithEvents txtPID As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents errP As ErrorProvider
+    Friend WithEvents Label5 As Label
+    Friend WithEvents cboSecurity As ComboBox
+    Friend WithEvents tsbAdmin As ToolStripButton
+    Friend WithEvents tsbAdminSeparator As ToolStripSeparator
 End Class

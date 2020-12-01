@@ -1,5 +1,6 @@
 ﻿Public Class frmLogin
     Private objSecuritys As CSecuritys
+    Private objAudits As CAudits
     Private changePass As Boolean
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
@@ -25,6 +26,13 @@
                     userID = .UserID
                 Else
                     MessageBox.Show("Incorrect Username or password!")
+                    With objAudits.CurrentObject
+                        .PID = "9999999"
+                        .AccessTimeStamp = DateTime.Now.ToShortTimeString
+                        .Success = False
+                    End With
+                    objAudits.Save()
+                    objAudits = New CAudits
                     Exit Sub
                 End If
             End With
@@ -55,6 +63,11 @@
                 End Try
             End If
             'otherwise, login
+            objAudits.CurrentObject.PID = objSecuritys.CurrentObject.PID
+            objAudits.CurrentObject.AccessTimeStamp = DateTime.Now.ToShortTimeString
+            objAudits.CurrentObject.Success = True
+            objAudits.Save()
+            objAudits = New CAudits
             Me.Close()
         Catch ex As Exception
             MessageBox.Show("Error loading User Values: " & ex.ToString, "Program error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -63,10 +76,15 @@
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
         objSecuritys = New CSecuritys
+        objAudits = New CAudits
     End Sub
 
     Private Sub btnGuest_Click(sender As Object, e As EventArgs) Handles btnGuest.Click
         secRole = GUEST
+        objAudits.CurrentObject.PID = "0000001"
+        objAudits.CurrentObject.AccessTimeStamp = DateTime.Now.ToShortTimeString
+        objAudits.CurrentObject.Success = True
+        objAudits.Save()
         Me.Close()
     End Sub
 

@@ -91,6 +91,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAudit.vb" />
+    <Compile Include="CAudits.vb" />
     <Compile Include="CDB.vb" />
     <Compile Include="CMember.vb" />
     <Compile Include="CMembers.vb" />
@@ -242,6 +244,7 @@
     <None Include="Resources\tutors.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\admin.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

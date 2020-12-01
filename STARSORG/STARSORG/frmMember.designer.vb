@@ -77,6 +77,8 @@ Partial Class frmMember
         Me.btnReset = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.btnSearch = New System.Windows.Forms.Button()
+        Me.tsbAdmin = New System.Windows.Forms.ToolStripButton()
+        Me.tsbAdminSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStrip1.SuspendLayout()
         Me.grpNew.SuspendLayout()
         Me.grpMembers.SuspendLayout()
@@ -90,7 +92,7 @@ Partial Class frmMember
         'ToolStrip1
         '
         Me.ToolStrip1.AutoSize = False
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator9, Me.tsbHome, Me.ToolStripSeparator1, Me.tsbMember, Me.ToolStripSeparator2, Me.tsbRole, Me.ToolStripSeparator5, Me.tsbEvent, Me.ToolStripSeparator3, Me.tsbRSVP, Me.ToolStripSeparator6, Me.tsbCourse, Me.ToolStripSeparator7, Me.tsbSemester, Me.ToolStripSeparator8, Me.tsbTutor, Me.ToolStripSeparator10, Me.tsbLogOut, Me.ToolStripSeparator12, Me.tsbHelp, Me.ToolStripSeparator4, Me.ToolStripSeparator11})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator9, Me.tsbHome, Me.ToolStripSeparator1, Me.tsbMember, Me.ToolStripSeparator2, Me.tsbRole, Me.ToolStripSeparator5, Me.tsbEvent, Me.ToolStripSeparator3, Me.tsbRSVP, Me.ToolStripSeparator6, Me.tsbCourse, Me.ToolStripSeparator7, Me.tsbSemester, Me.ToolStripSeparator8, Me.tsbTutor, Me.ToolStripSeparator10, Me.tsbLogOut, Me.ToolStripSeparator12, Me.tsbHelp, Me.ToolStripSeparator4, Me.ToolStripSeparator11, Me.tsbAdmin, Me.tsbAdminSeparator})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(980, 50)
@@ -572,6 +574,25 @@ Partial Class frmMember
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = True
         '
+        'tsbAdmin
+        '
+        Me.tsbAdmin.AutoSize = False
+        Me.tsbAdmin.BackgroundImage = Global.STARSORG.My.Resources.Resources.admin
+        Me.tsbAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.tsbAdmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbAdmin.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbAdmin.Name = "tsbAdmin"
+        Me.tsbAdmin.Size = New System.Drawing.Size(48, 48)
+        Me.tsbAdmin.Text = "ADMIN"
+        Me.tsbAdmin.Visible = False
+        '
+        'tsbAdminSeparator
+        '
+        Me.tsbAdminSeparator.AutoSize = False
+        Me.tsbAdminSeparator.Name = "tsbAdminSeparator"
+        Me.tsbAdminSeparator.Size = New System.Drawing.Size(10, 50)
+        Me.tsbAdminSeparator.Visible = False
+        '
         'frmMember
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -662,4 +683,6 @@ Partial Class frmMember
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents btnSearch As Button
     Friend WithEvents btnReset As Button
+    Friend WithEvents tsbAdmin As ToolStripButton
+    Friend WithEvents tsbAdminSeparator As ToolStripSeparator
 End Class

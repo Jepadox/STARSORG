@@ -44,7 +44,9 @@ Partial Class frmMain
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbHelp = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbAdmin = New System.Windows.Forms.ToolStripButton()
+        Me.tsbAdminSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.btnAdmin = New System.Windows.Forms.Button()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -63,7 +65,7 @@ Partial Class frmMain
         'ToolStrip1
         '
         Me.ToolStrip1.AutoSize = False
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbHome, Me.ToolStripSeparator1, Me.tsbMember, Me.ToolStripSeparator11, Me.tsbRole, Me.ToolStripSeparator8, Me.tsbEvent, Me.ToolStripSeparator7, Me.tsbRSVP, Me.ToolStripSeparator3, Me.tsbCourse, Me.ToolStripSeparator2, Me.tsbSemester, Me.ToolStripSeparator6, Me.tsbTutor, Me.ToolStripSeparator9, Me.tsbLogOut, Me.ToolStripSeparator5, Me.tsbHelp, Me.ToolStripSeparator10, Me.ToolStripSeparator4})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbHome, Me.ToolStripSeparator1, Me.tsbMember, Me.ToolStripSeparator11, Me.tsbRole, Me.ToolStripSeparator8, Me.tsbEvent, Me.ToolStripSeparator7, Me.tsbRSVP, Me.ToolStripSeparator3, Me.tsbCourse, Me.ToolStripSeparator2, Me.tsbSemester, Me.ToolStripSeparator6, Me.tsbTutor, Me.ToolStripSeparator9, Me.tsbLogOut, Me.ToolStripSeparator5, Me.tsbHelp, Me.ToolStripSeparator10, Me.ToolStripSeparator12, Me.tsbAdmin, Me.tsbAdminSeparator})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(697, 50)
@@ -244,12 +246,31 @@ Partial Class frmMain
         Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
         Me.ToolStripSeparator10.Size = New System.Drawing.Size(10, 50)
         '
-        'ToolStripSeparator4
+        'ToolStripSeparator12
         '
-        Me.ToolStripSeparator4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripSeparator4.AutoSize = False
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(10, 50)
+        Me.ToolStripSeparator12.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripSeparator12.AutoSize = False
+        Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
+        Me.ToolStripSeparator12.Size = New System.Drawing.Size(10, 50)
+        '
+        'tsbAdmin
+        '
+        Me.tsbAdmin.AutoSize = False
+        Me.tsbAdmin.BackgroundImage = Global.STARSORG.My.Resources.Resources.admin
+        Me.tsbAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.tsbAdmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbAdmin.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbAdmin.Name = "tsbAdmin"
+        Me.tsbAdmin.Size = New System.Drawing.Size(48, 48)
+        Me.tsbAdmin.Text = "ADMIN"
+        Me.tsbAdmin.Visible = False
+        '
+        'tsbAdminSeparator
+        '
+        Me.tsbAdminSeparator.AutoSize = False
+        Me.tsbAdminSeparator.Name = "tsbAdminSeparator"
+        Me.tsbAdminSeparator.Size = New System.Drawing.Size(10, 50)
+        Me.tsbAdminSeparator.Visible = False
         '
         'btnAdmin
         '
@@ -304,6 +325,8 @@ Partial Class frmMain
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents tsbAdminSeparator As ToolStripSeparator
     Friend WithEvents btnAdmin As Button
+    Friend WithEvents ToolStripSeparator12 As ToolStripSeparator
+    Friend WithEvents tsbAdmin As ToolStripButton
 End Class
