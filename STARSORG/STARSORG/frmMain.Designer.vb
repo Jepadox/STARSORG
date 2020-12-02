@@ -47,7 +47,6 @@ Partial Class frmMain
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbAdmin = New System.Windows.Forms.ToolStripButton()
         Me.tsbAdminSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.btnAdmin = New System.Windows.Forms.Button()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -272,15 +271,6 @@ Partial Class frmMain
         Me.tsbAdminSeparator.Size = New System.Drawing.Size(10, 50)
         Me.tsbAdminSeparator.Visible = False
         '
-        'btnAdmin
-        '
-        Me.btnAdmin.Location = New System.Drawing.Point(534, 177)
-        Me.btnAdmin.Name = "btnAdmin"
-        Me.btnAdmin.Size = New System.Drawing.Size(129, 66)
-        Me.btnAdmin.TabIndex = 2
-        Me.btnAdmin.Text = "admin test"
-        Me.btnAdmin.UseVisualStyleBackColor = True
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -290,7 +280,6 @@ Partial Class frmMain
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(697, 451)
         Me.ControlBox = False
-        Me.Controls.Add(Me.btnAdmin)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
@@ -326,7 +315,6 @@ Partial Class frmMain
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
     Friend WithEvents tsbAdminSeparator As ToolStripSeparator
-    Friend WithEvents btnAdmin As Button
     Friend WithEvents ToolStripSeparator12 As ToolStripSeparator
     Friend WithEvents tsbAdmin As ToolStripButton
 End Class

@@ -109,6 +109,7 @@ Public Class frmAdmin
         LoadListBoxChoices()
         ClearScreenControls(Me)
         LoadUsers()
+        grpEdit.Enabled = False
     End Sub
     Private Sub LoadListBoxChoices()
         cboSecurity.Items.Clear()
@@ -216,7 +217,7 @@ Public Class frmAdmin
         lstMembers.SelectedIndex = -1
         blnClearing = False
         objSecuritys.CurrentObject.IsNewSecurity = False
-        grpMembers.Enabled = True
+        grpEdit.Enabled = False
 
     End Sub
 End Class

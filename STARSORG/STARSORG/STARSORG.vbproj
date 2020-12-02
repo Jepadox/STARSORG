@@ -94,16 +94,28 @@
     <Compile Include="CAudit.vb" />
     <Compile Include="CAudits.vb" />
     <Compile Include="CDB.vb" />
+    <Compile Include="CEvent.vb" />
+    <Compile Include="CEvents.vb" />
     <Compile Include="CMember.vb" />
     <Compile Include="CMembers.vb" />
     <Compile Include="CRole.vb" />
     <Compile Include="CRoles.vb" />
+    <Compile Include="CRsvp.vb" />
+    <Compile Include="CRsvps.vb" />
     <Compile Include="CSecurity.vb" />
     <Compile Include="CSecuritys.vb" />
+    <Compile Include="CSemester.vb" />
+    <Compile Include="CSemesters.vb" />
     <Compile Include="frmAdmin.Designer.vb">
       <DependentUpon>frmAdmin.vb</DependentUpon>
     </Compile>
     <Compile Include="frmAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEvent.designer.vb">
+      <DependentUpon>frmEvent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEvent.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.vb">
@@ -143,6 +155,18 @@
     <Compile Include="frmRole.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmRsvp.designer.vb">
+      <DependentUpon>frmRsvp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRsvp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRsvpReport.designer.vb">
+      <DependentUpon>frmRsvpReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRsvpReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="modDB.vb" />
     <Compile Include="modErrHandler.vb" />
     <Compile Include="modGlobal.vb" />
@@ -167,6 +191,9 @@
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEvent.resx">
+      <DependentUpon>frmEvent.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRole.resx">
       <DependentUpon>frmRole.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRsvp.resx">
+      <DependentUpon>frmRsvp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRsvpReport.resx">
+      <DependentUpon>frmRsvpReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

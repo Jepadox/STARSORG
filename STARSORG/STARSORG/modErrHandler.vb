@@ -58,4 +58,15 @@
             Return True
         End If
     End Function
+    Public Function ValidateDateTimePicker(ByRef obj As DateTimePicker, ByRef errP As ErrorProvider) As Boolean
+        If obj.Value < Today.Date Then
+            errP.SetIconAlignment(obj, ErrorIconAlignment.MiddleLeft)
+            errP.SetError(obj, "You must pick a future date!")
+            obj.Focus()
+            Return False
+        Else
+            errP.SetError(obj, "")
+            Return True
+        End If
+    End Function
 End Module
