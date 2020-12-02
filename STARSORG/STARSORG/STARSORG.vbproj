@@ -259,6 +259,9 @@
     <EmbeddedResource Include="Reports\rptRoles.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptRsvp.rdlc" />
+    <EmbeddedResource Include="Reports\rptTutorsByCourseIDAndSemesterID.rdlc" />
+    <EmbeddedResource Include="Reports\rptTutorsBySemester.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">

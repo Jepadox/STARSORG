@@ -71,8 +71,8 @@ Public Class CTutor_Course
         'return -1 if the ID already exists (and we cannot create a new record with duplicate ID)
         If IsNewTutorCourse Then
             Dim params As New ArrayList
-            params.Add(New SqlParameter("CourseID", _mstrCourseID))
             params.Add(New SqlParameter("PID", _mstrPID))
+            params.Add(New SqlParameter("CourseID", _mstrCourseID))
             params.Add(New SqlParameter("SemesterID", _mstrSemesterID))
             Dim strResult As String = myDB.GetSingleValueFromSP("sp_CheckTutorCourseExists", params)
             If Not strResult = 0 Then
@@ -98,6 +98,15 @@ Public Class CTutor_Course
     End Function
 
     Public Function GetReportData() As SqlDataAdapter
-        Return myDB.GetDataAdapterBySP("dbo.sp_getAllRoles", Nothing)
+        Dim params As New ArrayList
+        params.Add(New SqlParameter("SemesterID", _mstrSemesterID))
+        Return myDB.GetDataAdapterBySP("sp_getAllTutorsBySemesterID", params)
+    End Function
+
+    Public Function GetReportData2() As SqlDataAdapter
+        Dim params As New ArrayList
+        params.Add(New SqlParameter("SemesterID", _mstrSemesterID))
+        params.Add(New SqlParameter("CourseID", _mstrCourseID))
+        Return myDB.GetDataAdapterBySP("sp_getAllTutorsByCourseIDAndSemesterID", params)
     End Function
 End Class

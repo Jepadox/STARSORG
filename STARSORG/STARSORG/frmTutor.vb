@@ -102,7 +102,7 @@ Public Class FrmTutor
         Dim objDR As SqlDataReader
         lstCurrentTutorCourses.Items.Clear()
         Try
-            objDR = objTutorCourses.GetTutorCourseByMemberPIDAndSemesterID(pantherID, cboSemester.SelectedIndex) 'add current logged in memberID inside of "MemberID"
+            objDR = objTutorCourses.GetTutorCourseByMemberPIDAndSemesterID(pantherID, cboSemester.SelectedItem) 'add current logged in memberID inside of "MemberID"
             Do While objDR.Read
                 lstCurrentTutorCourses.Items.Add(objDR.Item("CourseID"))
             Loop
@@ -226,14 +226,18 @@ Public Class FrmTutor
         End If
 
         If radRemoveTutoringCourse.Checked Then
-
+            With objTutorCourses.CurrentObject
+                .CourseID = lstCurrentTutorCourses.SelectedItem
+                .SemesterID = cboSemester.SelectedItem
+                .PID = pantherID
+            End With
             Try
                 Me.Cursor = Cursors.WaitCursor
                 intResult = objTutorCourses.Remove
-                If intResult = -1 Then
+                If intResult = 1 Then
                     tslStatus.Text = "Tutor Course Removed"
                 End If
-                If intResult = 1 Then 'Record did not exist 
+                If intResult = -1 Then 'Record did not exist 
                     MessageBox.Show("Unable to remove tutor course, member not currently tutoring selected course", "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     tslStatus.Text = "Error"
                 End If
@@ -247,6 +251,11 @@ Public Class FrmTutor
         End If
         If radAddNewTutoringCourse.Checked Then
 
+            With objTutorCourses.CurrentObject
+                .CourseID = lstAvailableTutoringCourses.SelectedItem
+                .SemesterID = cboSemester.SelectedItem
+                .PID = pantherID
+            End With
             Try
                 Me.Cursor = Cursors.WaitCursor
                 intResult = objTutorCourses.Save
@@ -298,25 +307,37 @@ Public Class FrmTutor
         radListTutorsForSemester.Checked = False
 
     End Sub
-    'COMMENTING OUT REPORT CLICK UNTIL REPORT IS FULLY IMPLEMENTED
 
-    'Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
-    '    Dim TutorsBySemesterReport As New frmTutorsBySemesterReport
-    '    Dim TutorsByCourseIDAndSemesterIDReport As New frmTutorsByCourseIDAndSemesterIDReport
-    '    If radListTutorsForCourses.Checked = False And radListTutorsForSemester.Checked = False Then
-    '        MessageBox.Show("Please select a report type")
-    '        Exit Sub
-    '    End If
-    '    If radListTutorsForSemester.Checked = True Then
-    '        Me.Cursor = Cursors.WaitCursor
-    '        TutorsBySemesterReport.Display()
-    '        Me.Cursor = Cursors.Default
-    '    End If
-    '    If radListTutorsForCourses.Checked = True Then
-    '        Me.Cursor = Cursors.WaitCursor
-    '        TutorsByCourseIDAndSemesterIDReport.Display()
-    '        Me.Cursor = Cursors.Default
-    '    End If
-    '
-    'End Sub
+
+    Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
+        Dim TutorsBySemesterReport As New frmTutorsBySemesterReport
+        Dim TutorsByCourseIDAndSemesterIDReport As New frmTutorsByCourseIDAndSemesterIDReport
+
+        If radListTutorsForCourses.Checked = False And radListTutorsForSemester.Checked = False Then
+            MessageBox.Show("Please select a report type")
+
+            Exit Sub
+        End If
+        If radListTutorsForSemester.Checked = True Then
+            If cboSemester.SelectedIndex = -1 Then
+                MessageBox.Show("Please select a semester")
+
+                Exit Sub
+            End If
+            Me.Cursor = Cursors.WaitCursor
+            TutorsBySemesterReport.Display(cboSemester.SelectedItem.ToString)
+            Me.Cursor = Cursors.Default
+        End If
+        If radListTutorsForCourses.Checked = True Then
+            If lstAvailableTutoringCourses.SelectedIndex = -1 Then
+                MessageBox.Show("Please select an Available Tutoring Course")
+
+                Exit Sub
+            End If
+            Me.Cursor = Cursors.WaitCursor
+            TutorsByCourseIDAndSemesterIDReport.Display(cboSemester.SelectedItem.ToString, lstAvailableTutoringCourses.SelectedItem.ToString)
+            Me.Cursor = Cursors.Default
+        End If
+
+    End Sub
 End Class

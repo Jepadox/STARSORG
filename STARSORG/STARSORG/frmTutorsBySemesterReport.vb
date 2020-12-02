@@ -9,8 +9,13 @@ Public Class frmTutorsBySemesterReport
 
         Me.rpvTutorsBySemesterReport.RefreshReport()
     End Sub
-    Public Sub Display()
+    Public Sub Display(strSemesterID As String)
         Tutor = New CTutor_Course
+
+        With Tutor
+            .SemesterID = strSemesterID
+            .PID = pantherID
+        End With
         rpvTutorsBySemesterReport.LocalReport.ReportPath = AppDomain.CurrentDomain.BaseDirectory & "Reports\rptTutorsBySemester.rdlc"
         ds = New DataSet
         da = Tutor.GetReportData

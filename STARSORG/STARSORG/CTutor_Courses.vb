@@ -39,11 +39,7 @@ Public Class CTutor_Courses
         Return _TutorCourse.Remove()
     End Function
 
-    Public Function GetAllTutorCoursesBySemester() As SqlDataReader
-        Dim objDR As SqlDataReader
-        objDR = myDB.GetDataReaderBySP("sp_getAllTutorCoursesBySemester", Nothing)
-        Return objDR
-    End Function
+
 
 
 
@@ -59,6 +55,7 @@ Public Class CTutor_Courses
 
 
     End Function
+
 
 
 End Class

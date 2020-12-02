@@ -225,5 +225,6 @@ Public Class frmRole
         End If
         Me.Cursor = Cursors.WaitCursor
         RoleReport.Display()
+        Me.Cursor = Cursors.Default
     End Sub
 End Class

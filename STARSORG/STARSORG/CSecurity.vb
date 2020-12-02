@@ -67,10 +67,11 @@ Public Class CSecurity
     End Property
 #End Region
     Public Function Save() As Integer
-        'return -1 if the ID already exosts (can not create a new record with duplicate ID)
+        'return -1 if the ID already exists (can not create a new record with duplicate ID)
         If IsNewSecurity Then
             Dim params As New ArrayList
             params.Add(New SqlParameter("PID", _mstrPID))
+            params.Add(New SqlParameter("UserID", _mstrUserID))
             Dim strResult As String = myDB.GetSingleValueFromSP("sp_CheckUserIDExists", params)
             If Not strResult = 0 Then
                 Return -1 'not unique

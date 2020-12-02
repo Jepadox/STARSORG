@@ -12,11 +12,18 @@ Public Class frmTutorsByCourseIDAndSemesterIDReport
         Me.rpvTutorsByCourseIDAndSemesterIDReport.RefreshReport()
     End Sub
 
-    Public Sub Display()
+    Public Sub Display(strSemesterID As String, strCourseID As String)
         Tutor = New CTutor_Course
+
+        With Tutor
+            .SemesterID = strSemesterID
+            .CourseID = strCourseID
+            .PID = pantherID
+        End With
+
         rpvTutorsByCourseIDAndSemesterIDReport.LocalReport.ReportPath = AppDomain.CurrentDomain.BaseDirectory & "Reports\rptTutorsByCourseIDAndSemesterID.rdlc"
         ds = New DataSet
-        da = Tutor.GetReportData
+        da = Tutor.GetReportData2
         da.Fill(ds)
         rpvTutorsByCourseIDAndSemesterIDReport.LocalReport.DataSources.Add(New ReportDataSource("dsTutorsByCourseIDAndSemesterID", ds.Tables(0)))
         rpvTutorsByCourseIDAndSemesterIDReport.SetDisplayMode(DisplayMode.PrintLayout)
