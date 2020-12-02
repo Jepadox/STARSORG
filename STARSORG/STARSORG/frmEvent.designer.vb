@@ -46,6 +46,8 @@ Partial Class frmEvent
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbHelp = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbAdmin = New System.Windows.Forms.ToolStripButton()
+        Me.tsbAdminSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.grpEdit = New System.Windows.Forms.GroupBox()
         Me.cboSemester = New System.Windows.Forms.ComboBox()
@@ -71,8 +73,6 @@ Partial Class frmEvent
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.tslStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.errP = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.tsbAdminSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbAdmin = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         Me.grpEdit.SuspendLayout()
         Me.grpEvents.SuspendLayout()
@@ -88,7 +88,7 @@ Partial Class frmEvent
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(738, 50)
-        Me.ToolStrip1.TabIndex = 3
+        Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
         'ToolStripSeparator9
@@ -278,6 +278,25 @@ Partial Class frmEvent
         Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
         Me.ToolStripSeparator11.Size = New System.Drawing.Size(10, 50)
         '
+        'tsbAdmin
+        '
+        Me.tsbAdmin.AutoSize = False
+        Me.tsbAdmin.BackgroundImage = Global.STARSORG.My.Resources.Resources.admin
+        Me.tsbAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.tsbAdmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbAdmin.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbAdmin.Name = "tsbAdmin"
+        Me.tsbAdmin.Size = New System.Drawing.Size(48, 48)
+        Me.tsbAdmin.Text = "ADMIN"
+        Me.tsbAdmin.Visible = False
+        '
+        'tsbAdminSeparator
+        '
+        Me.tsbAdminSeparator.AutoSize = False
+        Me.tsbAdminSeparator.Name = "tsbAdminSeparator"
+        Me.tsbAdminSeparator.Size = New System.Drawing.Size(10, 50)
+        Me.tsbAdminSeparator.Visible = False
+        '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.White
@@ -286,7 +305,7 @@ Partial Class frmEvent
         Me.Label1.Location = New System.Drawing.Point(12, 59)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(714, 47)
-        Me.Label1.TabIndex = 4
+        Me.Label1.TabIndex = 1
         Me.Label1.Text = "EVENTS"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -311,7 +330,7 @@ Partial Class frmEvent
         Me.grpEdit.Location = New System.Drawing.Point(336, 127)
         Me.grpEdit.Name = "grpEdit"
         Me.grpEdit.Size = New System.Drawing.Size(390, 332)
-        Me.grpEdit.TabIndex = 9
+        Me.grpEdit.TabIndex = 4
         Me.grpEdit.TabStop = False
         Me.grpEdit.Text = "Edit Event"
         '
@@ -323,7 +342,7 @@ Partial Class frmEvent
         Me.cboSemester.MaxLength = 4
         Me.cboSemester.Name = "cboSemester"
         Me.cboSemester.Size = New System.Drawing.Size(161, 21)
-        Me.cboSemester.TabIndex = 17
+        Me.cboSemester.TabIndex = 7
         '
         'cboType
         '
@@ -333,7 +352,7 @@ Partial Class frmEvent
         Me.cboType.MaxLength = 15
         Me.cboType.Name = "cboType"
         Me.cboType.Size = New System.Drawing.Size(161, 21)
-        Me.cboType.TabIndex = 16
+        Me.cboType.TabIndex = 5
         '
         'txtLocation
         '
@@ -341,7 +360,7 @@ Partial Class frmEvent
         Me.txtLocation.MaxLength = 50
         Me.txtLocation.Name = "txtLocation"
         Me.txtLocation.Size = New System.Drawing.Size(161, 20)
-        Me.txtLocation.TabIndex = 15
+        Me.txtLocation.TabIndex = 13
         '
         'Label8
         '
@@ -349,7 +368,7 @@ Partial Class frmEvent
         Me.Label8.Location = New System.Drawing.Point(25, 268)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(48, 13)
-        Me.Label8.TabIndex = 14
+        Me.Label8.TabIndex = 12
         Me.Label8.Text = "Location"
         '
         'dtmEnd
@@ -358,7 +377,7 @@ Partial Class frmEvent
         Me.dtmEnd.Location = New System.Drawing.Point(130, 227)
         Me.dtmEnd.Name = "dtmEnd"
         Me.dtmEnd.Size = New System.Drawing.Size(161, 20)
-        Me.dtmEnd.TabIndex = 13
+        Me.dtmEnd.TabIndex = 11
         '
         'Label7
         '
@@ -366,7 +385,7 @@ Partial Class frmEvent
         Me.Label7.Location = New System.Drawing.Point(25, 233)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(52, 13)
-        Me.Label7.TabIndex = 12
+        Me.Label7.TabIndex = 10
         Me.Label7.Text = "End Date"
         '
         'dtmStart
@@ -375,7 +394,7 @@ Partial Class frmEvent
         Me.dtmStart.Location = New System.Drawing.Point(130, 189)
         Me.dtmStart.Name = "dtmStart"
         Me.dtmStart.Size = New System.Drawing.Size(161, 20)
-        Me.dtmStart.TabIndex = 11
+        Me.dtmStart.TabIndex = 9
         '
         'Label6
         '
@@ -383,7 +402,7 @@ Partial Class frmEvent
         Me.Label6.Location = New System.Drawing.Point(25, 195)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(55, 13)
-        Me.Label6.TabIndex = 10
+        Me.Label6.TabIndex = 8
         Me.Label6.Text = "Start Date"
         '
         'Label5
@@ -392,7 +411,7 @@ Partial Class frmEvent
         Me.Label5.Location = New System.Drawing.Point(25, 156)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(51, 13)
-        Me.Label5.TabIndex = 8
+        Me.Label5.TabIndex = 6
         Me.Label5.Text = "Semester"
         '
         'Label4
@@ -401,7 +420,7 @@ Partial Class frmEvent
         Me.Label4.Location = New System.Drawing.Point(25, 121)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(62, 13)
-        Me.Label4.TabIndex = 6
+        Me.Label4.TabIndex = 4
         Me.Label4.Text = "Event Type"
         '
         'btnCancel
@@ -409,7 +428,7 @@ Partial Class frmEvent
         Me.btnCancel.Location = New System.Drawing.Point(223, 291)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(68, 25)
-        Me.btnCancel.TabIndex = 5
+        Me.btnCancel.TabIndex = 15
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
@@ -418,7 +437,7 @@ Partial Class frmEvent
         Me.btnSave.Location = New System.Drawing.Point(130, 291)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(68, 25)
-        Me.btnSave.TabIndex = 4
+        Me.btnSave.TabIndex = 14
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
@@ -437,7 +456,7 @@ Partial Class frmEvent
         Me.txtEventID.MaxLength = 15
         Me.txtEventID.Name = "txtEventID"
         Me.txtEventID.Size = New System.Drawing.Size(161, 20)
-        Me.txtEventID.TabIndex = 2
+        Me.txtEventID.TabIndex = 1
         '
         'Label3
         '
@@ -445,7 +464,7 @@ Partial Class frmEvent
         Me.Label3.Location = New System.Drawing.Point(25, 60)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(60, 13)
-        Me.Label3.TabIndex = 1
+        Me.Label3.TabIndex = 2
         Me.Label3.Text = "Description"
         '
         'Label2
@@ -463,7 +482,7 @@ Partial Class frmEvent
         Me.grpEvents.Location = New System.Drawing.Point(12, 187)
         Me.grpEvents.Name = "grpEvents"
         Me.grpEvents.Size = New System.Drawing.Size(294, 272)
-        Me.grpEvents.TabIndex = 8
+        Me.grpEvents.TabIndex = 3
         Me.grpEvents.TabStop = False
         Me.grpEvents.Text = "EVENTS"
         '
@@ -481,7 +500,7 @@ Partial Class frmEvent
         Me.grpNew.Location = New System.Drawing.Point(12, 127)
         Me.grpNew.Name = "grpNew"
         Me.grpNew.Size = New System.Drawing.Size(294, 46)
-        Me.grpNew.TabIndex = 7
+        Me.grpNew.TabIndex = 2
         Me.grpNew.TabStop = False
         Me.grpNew.Text = "New Event"
         '
@@ -501,7 +520,7 @@ Partial Class frmEvent
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 469)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(738, 22)
-        Me.StatusStrip1.TabIndex = 10
+        Me.StatusStrip1.TabIndex = 5
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'tslStatus
@@ -514,25 +533,6 @@ Partial Class frmEvent
         'errP
         '
         Me.errP.ContainerControl = Me
-        '
-        'tsbAdminSeparator
-        '
-        Me.tsbAdminSeparator.AutoSize = False
-        Me.tsbAdminSeparator.Name = "tsbAdminSeparator"
-        Me.tsbAdminSeparator.Size = New System.Drawing.Size(10, 50)
-        Me.tsbAdminSeparator.Visible = False
-        '
-        'tsbAdmin
-        '
-        Me.tsbAdmin.AutoSize = False
-        Me.tsbAdmin.BackgroundImage = Global.STARSORG.My.Resources.Resources.admin
-        Me.tsbAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.tsbAdmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbAdmin.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbAdmin.Name = "tsbAdmin"
-        Me.tsbAdmin.Size = New System.Drawing.Size(48, 48)
-        Me.tsbAdmin.Text = "ADMIN"
-        Me.tsbAdmin.Visible = False
         '
         'frmEvent
         '

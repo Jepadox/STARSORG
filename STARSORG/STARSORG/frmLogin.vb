@@ -24,6 +24,7 @@
                 If .Password = txtPass.Text Then
                     secRole = .SecRole
                     userID = .UserID
+                    pantherID = .PID
                 Else
                     MessageBox.Show("Incorrect Username or password!")
                     With objAudits.CurrentObject

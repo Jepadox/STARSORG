@@ -81,3 +81,6 @@ C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STAR
 C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.frmEvent.resources
 C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.frmRsvp.resources
 C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.frmRsvpReport.resources
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.FrmTutor.resources
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.frmTutorsByCourseIDAndSemesterIDReport.resources
+C:\Users\techa\Documents\GitHub\project-Jepadox\STARSORG\STARSORG\obj\Debug\STARSORG.frmTutorsBySemesterReport.resources

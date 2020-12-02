@@ -25,4 +25,5 @@
     Public myDB As New CDB
     Public secRole As String
     Public userID As String
+    Public pantherID As String
 End Module

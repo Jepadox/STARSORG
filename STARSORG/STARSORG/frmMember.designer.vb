@@ -46,6 +46,8 @@ Partial Class frmMember
         Me.tsbHelp = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbAdmin = New System.Windows.Forms.ToolStripButton()
+        Me.tsbAdminSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.grpNew = New System.Windows.Forms.GroupBox()
         Me.chkNew = New System.Windows.Forms.CheckBox()
@@ -77,8 +79,6 @@ Partial Class frmMember
         Me.btnReset = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.btnSearch = New System.Windows.Forms.Button()
-        Me.tsbAdmin = New System.Windows.Forms.ToolStripButton()
-        Me.tsbAdminSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStrip1.SuspendLayout()
         Me.grpNew.SuspendLayout()
         Me.grpMembers.SuspendLayout()
@@ -96,7 +96,7 @@ Partial Class frmMember
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(980, 50)
-        Me.ToolStrip1.TabIndex = 3
+        Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
         'ToolStripSeparator9
@@ -286,6 +286,25 @@ Partial Class frmMember
         Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
         Me.ToolStripSeparator11.Size = New System.Drawing.Size(10, 50)
         '
+        'tsbAdmin
+        '
+        Me.tsbAdmin.AutoSize = False
+        Me.tsbAdmin.BackgroundImage = Global.STARSORG.My.Resources.Resources.admin
+        Me.tsbAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.tsbAdmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbAdmin.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbAdmin.Name = "tsbAdmin"
+        Me.tsbAdmin.Size = New System.Drawing.Size(48, 48)
+        Me.tsbAdmin.Text = "ADMIN"
+        Me.tsbAdmin.Visible = False
+        '
+        'tsbAdminSeparator
+        '
+        Me.tsbAdminSeparator.AutoSize = False
+        Me.tsbAdminSeparator.Name = "tsbAdminSeparator"
+        Me.tsbAdminSeparator.Size = New System.Drawing.Size(10, 50)
+        Me.tsbAdminSeparator.Visible = False
+        '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.White
@@ -294,7 +313,7 @@ Partial Class frmMember
         Me.Label1.Location = New System.Drawing.Point(12, 64)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(955, 60)
-        Me.Label1.TabIndex = 4
+        Me.Label1.TabIndex = 1
         Me.Label1.Text = "MEMBERS"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -304,7 +323,7 @@ Partial Class frmMember
         Me.grpNew.Location = New System.Drawing.Point(12, 144)
         Me.grpNew.Name = "grpNew"
         Me.grpNew.Size = New System.Drawing.Size(262, 47)
-        Me.grpNew.TabIndex = 5
+        Me.grpNew.TabIndex = 2
         Me.grpNew.TabStop = False
         Me.grpNew.Text = "New Member"
         '
@@ -324,7 +343,7 @@ Partial Class frmMember
         Me.grpMembers.Location = New System.Drawing.Point(12, 200)
         Me.grpMembers.Name = "grpMembers"
         Me.grpMembers.Size = New System.Drawing.Size(262, 157)
-        Me.grpMembers.TabIndex = 6
+        Me.grpMembers.TabIndex = 3
         Me.grpMembers.TabStop = False
         Me.grpMembers.Text = "MEMBERS"
         '
@@ -356,7 +375,7 @@ Partial Class frmMember
         Me.grpEdit.Location = New System.Drawing.Point(295, 144)
         Me.grpEdit.Name = "grpEdit"
         Me.grpEdit.Size = New System.Drawing.Size(448, 297)
-        Me.grpEdit.TabIndex = 7
+        Me.grpEdit.TabIndex = 5
         Me.grpEdit.TabStop = False
         Me.grpEdit.Text = "Edit Member"
         '
@@ -368,7 +387,7 @@ Partial Class frmMember
         Me.txtPhone.Multiline = True
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(315, 20)
-        Me.txtPhone.TabIndex = 14
+        Me.txtPhone.TabIndex = 11
         '
         'Label7
         '
@@ -376,7 +395,7 @@ Partial Class frmMember
         Me.Label7.Location = New System.Drawing.Point(14, 160)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(78, 13)
-        Me.Label7.TabIndex = 13
+        Me.Label7.TabIndex = 10
         Me.Label7.Text = "Phone Number"
         '
         'txtEmail
@@ -386,7 +405,7 @@ Partial Class frmMember
         Me.txtEmail.Multiline = True
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(315, 20)
-        Me.txtEmail.TabIndex = 12
+        Me.txtEmail.TabIndex = 9
         '
         'Label6
         '
@@ -394,7 +413,7 @@ Partial Class frmMember
         Me.Label6.Location = New System.Drawing.Point(14, 134)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(32, 13)
-        Me.Label6.TabIndex = 11
+        Me.Label6.TabIndex = 8
         Me.Label6.Text = "Email"
         '
         'txtMiddleName
@@ -404,7 +423,7 @@ Partial Class frmMember
         Me.txtMiddleName.Multiline = True
         Me.txtMiddleName.Name = "txtMiddleName"
         Me.txtMiddleName.Size = New System.Drawing.Size(315, 20)
-        Me.txtMiddleName.TabIndex = 10
+        Me.txtMiddleName.TabIndex = 7
         '
         'Label5
         '
@@ -412,7 +431,7 @@ Partial Class frmMember
         Me.Label5.Location = New System.Drawing.Point(14, 108)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(69, 13)
-        Me.Label5.TabIndex = 9
+        Me.Label5.TabIndex = 6
         Me.Label5.Text = "Middle Name"
         '
         'txtLName
@@ -422,7 +441,7 @@ Partial Class frmMember
         Me.txtLName.Multiline = True
         Me.txtLName.Name = "txtLName"
         Me.txtLName.Size = New System.Drawing.Size(315, 20)
-        Me.txtLName.TabIndex = 8
+        Me.txtLName.TabIndex = 5
         '
         'Label4
         '
@@ -430,7 +449,7 @@ Partial Class frmMember
         Me.Label4.Location = New System.Drawing.Point(14, 82)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(58, 13)
-        Me.Label4.TabIndex = 7
+        Me.Label4.TabIndex = 4
         Me.Label4.Text = "Last Name"
         '
         'btnReport
@@ -438,7 +457,7 @@ Partial Class frmMember
         Me.btnReport.Location = New System.Drawing.Point(303, 262)
         Me.btnReport.Name = "btnReport"
         Me.btnReport.Size = New System.Drawing.Size(127, 29)
-        Me.btnReport.TabIndex = 6
+        Me.btnReport.TabIndex = 14
         Me.btnReport.Text = "Report"
         Me.btnReport.UseVisualStyleBackColor = True
         '
@@ -447,7 +466,7 @@ Partial Class frmMember
         Me.btnCancel.Location = New System.Drawing.Point(165, 261)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(127, 29)
-        Me.btnCancel.TabIndex = 5
+        Me.btnCancel.TabIndex = 13
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
@@ -456,7 +475,7 @@ Partial Class frmMember
         Me.btnSave.Location = New System.Drawing.Point(17, 260)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(137, 31)
-        Me.btnSave.TabIndex = 4
+        Me.btnSave.TabIndex = 12
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
@@ -475,7 +494,7 @@ Partial Class frmMember
         Me.txtPID.MaxLength = 15
         Me.txtPID.Name = "txtPID"
         Me.txtPID.Size = New System.Drawing.Size(315, 20)
-        Me.txtPID.TabIndex = 2
+        Me.txtPID.TabIndex = 1
         '
         'Label3
         '
@@ -483,7 +502,7 @@ Partial Class frmMember
         Me.Label3.Location = New System.Drawing.Point(14, 56)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(57, 13)
-        Me.Label3.TabIndex = 1
+        Me.Label3.TabIndex = 2
         Me.Label3.Text = "First Name"
         '
         'Label2
@@ -513,7 +532,7 @@ Partial Class frmMember
         Me.btnBrowse.Location = New System.Drawing.Point(767, 405)
         Me.btnBrowse.Name = "btnBrowse"
         Me.btnBrowse.Size = New System.Drawing.Size(199, 25)
-        Me.btnBrowse.TabIndex = 10
+        Me.btnBrowse.TabIndex = 6
         Me.btnBrowse.Text = "Browse for Photo ..."
         Me.btnBrowse.UseVisualStyleBackColor = True
         '
@@ -523,7 +542,7 @@ Partial Class frmMember
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 456)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(980, 22)
-        Me.StatusStrip1.TabIndex = 11
+        Me.StatusStrip1.TabIndex = 7
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'tslStatus
@@ -545,7 +564,7 @@ Partial Class frmMember
         Me.grpLookUp.Location = New System.Drawing.Point(12, 368)
         Me.grpLookUp.Name = "grpLookUp"
         Me.grpLookUp.Size = New System.Drawing.Size(262, 73)
-        Me.grpLookUp.TabIndex = 12
+        Me.grpLookUp.TabIndex = 4
         Me.grpLookUp.TabStop = False
         Me.grpLookUp.Text = "Last Name Search"
         '
@@ -554,7 +573,7 @@ Partial Class frmMember
         Me.btnReset.Location = New System.Drawing.Point(7, 44)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(115, 22)
-        Me.btnReset.TabIndex = 2
+        Me.btnReset.TabIndex = 1
         Me.btnReset.Text = "Reset"
         Me.btnReset.UseVisualStyleBackColor = True
         '
@@ -563,35 +582,16 @@ Partial Class frmMember
         Me.txtSearch.Location = New System.Drawing.Point(7, 21)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(244, 20)
-        Me.txtSearch.TabIndex = 1
+        Me.txtSearch.TabIndex = 0
         '
         'btnSearch
         '
         Me.btnSearch.Location = New System.Drawing.Point(136, 44)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(115, 22)
-        Me.btnSearch.TabIndex = 0
+        Me.btnSearch.TabIndex = 2
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = True
-        '
-        'tsbAdmin
-        '
-        Me.tsbAdmin.AutoSize = False
-        Me.tsbAdmin.BackgroundImage = Global.STARSORG.My.Resources.Resources.admin
-        Me.tsbAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.tsbAdmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbAdmin.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbAdmin.Name = "tsbAdmin"
-        Me.tsbAdmin.Size = New System.Drawing.Size(48, 48)
-        Me.tsbAdmin.Text = "ADMIN"
-        Me.tsbAdmin.Visible = False
-        '
-        'tsbAdminSeparator
-        '
-        Me.tsbAdminSeparator.AutoSize = False
-        Me.tsbAdminSeparator.Name = "tsbAdminSeparator"
-        Me.tsbAdminSeparator.Size = New System.Drawing.Size(10, 50)
-        Me.tsbAdminSeparator.Visible = False
         '
         'frmMember
         '

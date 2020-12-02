@@ -93,6 +93,8 @@
   <ItemGroup>
     <Compile Include="CAudit.vb" />
     <Compile Include="CAudits.vb" />
+    <Compile Include="CCourse.vb" />
+    <Compile Include="CCourses.vb" />
     <Compile Include="CDB.vb" />
     <Compile Include="CEvent.vb" />
     <Compile Include="CEvents.vb" />
@@ -106,6 +108,8 @@
     <Compile Include="CSecuritys.vb" />
     <Compile Include="CSemester.vb" />
     <Compile Include="CSemesters.vb" />
+    <Compile Include="CTutor_Course.vb" />
+    <Compile Include="CTutor_Courses.vb" />
     <Compile Include="frmAdmin.Designer.vb">
       <DependentUpon>frmAdmin.vb</DependentUpon>
     </Compile>
@@ -167,6 +171,24 @@
     <Compile Include="frmRsvpReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmTutor.designer.vb">
+      <DependentUpon>frmTutor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTutor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTutorsByCourseIDAndSemesterIDReport.designer.vb">
+      <DependentUpon>frmTutorsByCourseIDAndSemesterIDReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTutorsByCourseIDAndSemesterIDReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTutorsBySemesterReport.designer.vb">
+      <DependentUpon>frmTutorsBySemesterReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTutorsBySemesterReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="modDB.vb" />
     <Compile Include="modErrHandler.vb" />
     <Compile Include="modGlobal.vb" />
@@ -217,6 +239,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRsvpReport.resx">
       <DependentUpon>frmRsvpReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTutor.resx">
+      <DependentUpon>frmTutor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTutorsByCourseIDAndSemesterIDReport.resx">
+      <DependentUpon>frmTutorsByCourseIDAndSemesterIDReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTutorsBySemesterReport.resx">
+      <DependentUpon>frmTutorsBySemesterReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

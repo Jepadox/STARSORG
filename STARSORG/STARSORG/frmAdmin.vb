@@ -189,7 +189,7 @@ Public Class frmAdmin
                 tslStatus.Text = "Error"
             End If
         Catch ex As Exception
-            MessageBox.Show("Unable to save record: " & ex.ToString, "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error in btnSave_Click: " & ex.ToString, "Database error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             tslStatus.Text = "Error"
         End Try
         Me.Cursor = Cursors.Default

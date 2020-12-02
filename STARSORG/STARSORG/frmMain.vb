@@ -6,6 +6,7 @@
     Private Admin As frmAdmin
     Private Rsvp As frmRsvp
     Private sEvent As frmEvent 'sEvent to bypass keyword "event"
+    Private Tutor As FrmTutor
     Private Sub tsbProxy_MouseEnter(sender As Object, e As EventArgs) Handles tsbCourse.MouseEnter, tsbEvent.MouseEnter, tsbHelp.MouseEnter, tsbHome.MouseEnter, tsbMember.MouseEnter, tsbRole.MouseEnter, tsbRSVP.MouseEnter, tsbSemester.MouseEnter, tsbTutor.MouseEnter, tsbLogOut.MouseEnter, tsbAdmin.MouseEnter
         'We need to do this because we are not putting out images in the image property of the toolbar buttons
         Dim tsbProxy As ToolStripButton
@@ -29,6 +30,7 @@
         Admin = New frmAdmin
         sEvent = New frmEvent
         Rsvp = New frmRsvp
+        Tutor = New FrmTutor
         Try
             myDB.OpenDB()
         Catch ex As Exception
@@ -84,6 +86,12 @@
     Private Sub tsbEvent_Click(sender As Object, e As EventArgs) Handles tsbEvent.Click
         Me.Hide()
         sEvent.ShowDialog()
+        Me.Show()
+        PerformNextAction()
+    End Sub
+    Private Sub tsbTutor_Click(sender As Object, e As EventArgs) Handles tsbTutor.Click
+        Me.Hide()
+        Tutor.ShowDialog()
         Me.Show()
         PerformNextAction()
     End Sub

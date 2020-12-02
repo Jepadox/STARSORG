@@ -54,7 +54,7 @@ Partial Class frmLogin
         Me.txtUser.MaxLength = 15
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(350, 20)
-        Me.txtUser.TabIndex = 1
+        Me.txtUser.TabIndex = 2
         '
         'txtPass
         '
@@ -63,7 +63,7 @@ Partial Class frmLogin
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPass.Size = New System.Drawing.Size(350, 20)
-        Me.txtPass.TabIndex = 2
+        Me.txtPass.TabIndex = 4
         '
         'Label2
         '
@@ -71,7 +71,7 @@ Partial Class frmLogin
         Me.Label2.Location = New System.Drawing.Point(48, 52)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 13)
-        Me.Label2.TabIndex = 3
+        Me.Label2.TabIndex = 1
         Me.Label2.Text = "Username"
         '
         'lblPassword
@@ -80,7 +80,7 @@ Partial Class frmLogin
         Me.lblPassword.Location = New System.Drawing.Point(48, 91)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(53, 13)
-        Me.lblPassword.TabIndex = 4
+        Me.lblPassword.TabIndex = 3
         Me.lblPassword.Text = "Password"
         '
         'btnLogin
@@ -88,7 +88,7 @@ Partial Class frmLogin
         Me.btnLogin.Location = New System.Drawing.Point(51, 195)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(99, 35)
-        Me.btnLogin.TabIndex = 5
+        Me.btnLogin.TabIndex = 8
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
@@ -97,7 +97,7 @@ Partial Class frmLogin
         Me.btnGuest.Location = New System.Drawing.Point(176, 195)
         Me.btnGuest.Name = "btnGuest"
         Me.btnGuest.Size = New System.Drawing.Size(99, 35)
-        Me.btnGuest.TabIndex = 6
+        Me.btnGuest.TabIndex = 9
         Me.btnGuest.Text = "Login as guest"
         Me.btnGuest.UseVisualStyleBackColor = True
         '
@@ -106,7 +106,7 @@ Partial Class frmLogin
         Me.btnExit.Location = New System.Drawing.Point(301, 195)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(99, 35)
-        Me.btnExit.TabIndex = 8
+        Me.btnExit.TabIndex = 10
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -120,7 +120,7 @@ Partial Class frmLogin
         Me.lblNewPassword.Location = New System.Drawing.Point(48, 153)
         Me.lblNewPassword.Name = "lblNewPassword"
         Me.lblNewPassword.Size = New System.Drawing.Size(78, 13)
-        Me.lblNewPassword.TabIndex = 10
+        Me.lblNewPassword.TabIndex = 6
         Me.lblNewPassword.Text = "New Password"
         Me.lblNewPassword.Visible = False
         '
@@ -131,7 +131,7 @@ Partial Class frmLogin
         Me.txtNewPassword.Name = "txtNewPassword"
         Me.txtNewPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtNewPassword.Size = New System.Drawing.Size(350, 20)
-        Me.txtNewPassword.TabIndex = 9
+        Me.txtNewPassword.TabIndex = 7
         Me.txtNewPassword.Visible = False
         '
         'chkChangePassword
@@ -140,7 +140,7 @@ Partial Class frmLogin
         Me.chkChangePassword.Location = New System.Drawing.Point(51, 133)
         Me.chkChangePassword.Name = "chkChangePassword"
         Me.chkChangePassword.Size = New System.Drawing.Size(121, 17)
-        Me.chkChangePassword.TabIndex = 11
+        Me.chkChangePassword.TabIndex = 5
         Me.chkChangePassword.Text = "Change Password? "
         Me.chkChangePassword.UseVisualStyleBackColor = True
         '
