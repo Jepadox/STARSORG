@@ -1,5 +1,4 @@
 ﻿Imports System.Data.SqlClient
-'Imports System.IO
 Public Class frmAdmin
     Private objMembers As CMembers
     Private objSecuritys As CSecuritys
@@ -80,7 +79,6 @@ Public Class frmAdmin
             objDR = objMembers.GetAllMembers()
             Do While objDR.Read
                 lstMembers.Items.Add(objDR.Item("PID"))
-                'lstMembers.Items.Add(objDR.Item("FName"))
             Loop
             objDR.Close()
         Catch ex As Exception
@@ -88,9 +86,7 @@ Public Class frmAdmin
             MessageBox.Show("Error in LoadMembers", "Program Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
         If objMembers.CurrentObject.PID <> "" Then
-            'If objMembers.CurrentObject.FName <> "" Then
             lstMembers.SelectedIndex = lstMembers.FindStringExact(objMembers.CurrentObject.PID)
-            'lstMembers.SelectedIndex = lstMembers.FindStringExact(objMembers.CurrentObject.FName)
         End If
         blnReloading = False
     End Sub
@@ -159,7 +155,7 @@ Public Class frmAdmin
         Dim intResult As Integer
         Dim blnErrors As Boolean
         tslStatus.Text = ""
-        '------ add your validation code here -----
+        'validation of data being saved
         If Not ValidateTextBoxLength(txtUserID, errP) Then
             blnErrors = True
         End If
@@ -195,7 +191,6 @@ Public Class frmAdmin
         Me.Cursor = Cursors.Default
         blnReloading = True
         LoadUsers() 'reload so a newly saved record will appear in the list
-        'chkNew.Checked = False
         txtPID.Clear()
         txtPassword.Clear()
         cboSecurity.SelectedIndex = -1

@@ -31,14 +31,12 @@ Public Class CSecuritys
     End Function
     Public Function GetUserByUserID(strID As String) As CSecurity
         Dim params As New ArrayList
-        'Dim objDR As SqlDataReader
         params.Add(New SqlParameter("userID", strID))
         FillObject(myDB.GetDataReaderBySP("sp_getUserByUserID", params))
         Return _Security
     End Function
     Public Function GetUserByPID(strID As String) As CSecurity
         Dim params As New ArrayList
-        'Dim objDR As SqlDataReader
         params.Add(New SqlParameter("pID", strID))
         FillObject(myDB.GetDataReaderBySP("sp_getUserByPID", params))
         Return _Security

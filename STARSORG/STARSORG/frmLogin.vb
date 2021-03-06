@@ -9,6 +9,7 @@
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim blnErrors As Boolean
         Dim intResult As Integer
+        'do nothing if username or password is left blank
         If Not ValidateTextBoxLength(txtUser, errP) Then
             blnErrors = True
         End If
@@ -81,6 +82,7 @@
     End Sub
 
     Private Sub btnGuest_Click(sender As Object, e As EventArgs) Handles btnGuest.Click
+        'logs in with guest account valued at ID 0000001
         secRole = GUEST
         objAudits.CurrentObject.PID = "0000001"
         objAudits.CurrentObject.AccessTimeStamp = DateTime.Now.ToShortTimeString
@@ -89,6 +91,8 @@
         Me.Close()
     End Sub
 
+
+    'reveals/hides change password controls if checkbox is selected/deselected
     Private Sub chkChangePassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkChangePassword.CheckedChanged
         If chkChangePassword.Checked = True Then
             lblNewPassword.Visible = True
